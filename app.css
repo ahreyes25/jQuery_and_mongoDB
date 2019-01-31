@@ -1,0 +1,58 @@
+.center-horiz {
+	display: table;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.container-min {
+	width: 500px;
+	height: auto;
+	padding: 10px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #d8d8d8;
+	box-shadow: 1px 1px 1px 1px #e8ecf2;
+	overflow: hidden;
+	margin-top: 10px !important;
+}
+
+.inactive {
+	visibility: hidden;
+}
+
+.active {
+	visibility: visible;
+}
+
+.top-space {
+	margin-top: 5px;
+}
+
+.spin-shrink:active {
+	animation-name: spinShrinkAnimation;
+  	animation-duration: 1s;
+  	animation-iteration-count: 1;
+  	animation-timing-function: ease-out;
+  	animation-fill-mode: forwards;
+}
+
+@keyframes spinShrinkAnimation {
+	0% {transform: rotate(0deg) scale(1); opacity: 1;}
+	100% {transform: rotate(90deg) scale(0.25); opacity: 0;}
+}
+
+.spin {
+ animation-name: spinAnimation;
+ animation-duration: 2s;
+ animation-iteration-count: infinite;
+ animation-timing-function: linear;
+ animation-fill-mode: forwards;
+}
+
+@keyframes spinAnimation {
+ 0% {transform: rotate(0deg);}
+ 25% {transform: rotate(90deg);}
+ 50% {transform: rotate(180deg);}
+ 75% {transform: rotate(270deg);}
+ 100% {transform: rotate(360deg);}
+}

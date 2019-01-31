@@ -1,0 +1,80 @@
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>My project</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width">
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet"
+	integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.18/r-2.2.2/rg-1.1.0/datatables.min.css" />
+<link href="app.css" rel="stylesheet">
+
+</head>
+<body>
+
+	<!-- Login Screen -->
+	<div id="login" class="active">
+		<div class="container-min center-horiz">
+			<h2 class="center-horiz">Login</h2>
+			<div class="center-horiz top-space" style="text-align: right !important;">
+				Username <input id="txtBx_username1" type="text"><br>
+				Password <input id="txtBx_password1" type="text" class="top-space">
+			</div>
+
+			<div class="center-horiz top-space">
+				<button onclick="login();">Login</button>
+			</div>
+			<div class="center-horiz top-space">
+				<button onclick="showSignup();">Signup</button>
+			</div>
+		</div>
+	</div>
+	<!------------------->
+
+	<!-- Signup Screen -->
+	<div id="signup" class="inactive">
+		<div class="container-min center-horiz">
+			<canvas id="btn_x" width="20" height="20" style="float:left" class="spin-shrink" onclick="hideSignup()"></canvas>
+
+			<script>
+				var canvas = document.getElementById("btn_x");
+				var ctx = canvas.getContext("2d");
+				ctx.fillStyle = "#000000";
+				ctx.beginPath();
+				ctx.moveTo(0, 0);
+				ctx.lineTo(canvas.width, canvas.height);
+				ctx.stroke();
+				ctx.moveTo(0, canvas.height);
+				ctx.lineTo(canvas.width, 0);
+				ctx.stroke();
+			</script>
+
+			<h2 class="center-horiz">Signup</h2>
+			<div class="center-horiz top-space" style="text-align: right !important;">
+				Name <input id="txtBx_name" type="text"><br>
+				Username <input id="txtBx_username2" type="text" class="top-space"><br>
+				Password <input id="txtBx_password2" type="text" class="top-space">
+			</div>
+			<div class="center-horiz top-space">
+				<button onclick="signup();">Signup</button>
+			</div>
+		</div>
+	</div>
+	<!------------------->	
+
+	<div class="fluid-container center-horiz">
+		<div class="col-10 offset-1 center-horiz">
+			<h3 id='questions-label' class='text-center center-horiz inactive'>Questions</h3>
+			<div id="questionsList" class="center-horiz"></div>
+		</div>
+	</div>
+
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.18/r-2.2.2/rg-1.1.0/datatables.min.js"></script>
+	<script type="text/javascript" src="tutorial.js"></script>
+</body>
+</html>
